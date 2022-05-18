@@ -1,0 +1,166 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "Yeseva One", cursive;
+}
+.row {
+  margin-right: 0;
+  margin-left: 0;
+  height: 100%;
+  width: 100%;
+}
+.locationTimeBackground {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://images.pexels.com/photos/11211186/pexels-photo-11211186.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+.locationTime {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  font-size: 28px;
+  margin-top: 40px;
+  color: whitesmoke;
+}
+.live-date {
+  margin: 500px 70px;
+  font-size: 40px;
+  height: 100%;
+  width: 100%;
+}
+.temperature-container {
+  padding: 0;
+  text-align: center;
+  margin: 50px 0;
+}
+.temp-range {
+  font-size: 20px;
+  padding: 0px;
+  margin: 5px 0;
+}
+.temp-arrows {
+  color: black;
+  font-size: 35px;
+  margin: 10px;
+}
+.location-search {
+  margin: 0 auto;
+  text-align: center;
+}
+.location-search-card {
+  border-radius: 20px;
+  width: 700px;
+}
+.card-body {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+.location-information {
+  height: 260px;
+  margin: 0 auto 20px;
+}
+.second {
+  padding: 20px;
+  height: fit-content;
+  background-color: #ffadad;
+}
+.days {
+  height: 180px;
+  text-align: center;
+  margin: 10px 0;
+}
+.title-day {
+  text-decoration: underline;
+}
+.day-background {
+  background-color: #fcfcfc;
+  border-radius: 15px;
+  height: 100%;
+  width: 100%;
+  padding: 8px;
+}
+.all-days-container {
+  padding: 0 5px;
+}
+.forecast-title {
+  background-color: #fcfcfc;
+  display: block;
+  margin: 30px auto 20px;
+  width: fit-content;
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 18px;
+}
+.days-container {
+  background-color: #f1dfd9;
+  border-radius: 20px;
+  padding: 0 10px;
+}
+p {
+  font-size: 9px;
+  text-align: center;
+  margin: 10px 2px 3px;
+}
+.five-days-container {
+  width: 95%;
+  display: block;
+  margin: 0 auto;
+}
+.day-degrees {
+  position: absolute;
+  top: 38px;
+  right: 15%;
+}
+
+.weather-emoji {
+  margin: 20px 2px 5px;
+  padding: 5px;
+}
+
+.explore {
+  width: 90%;
+  height: 90%;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 20px;
+}
+.where-background {
+  background-color: #ffadad;
+  padding: 20px;
+}
+
+.city-input {
+  border-radius: 18px;
+  border: solid #f1dfd9 1px;
+  display: inline-block;
+  margin: 10px 5px 10px 15%;
+  padding: 4px 12px;
+}
+.search-city {
+  border-radius: 28px;
+  font-size: 14px;
+  border: solid rgb(241, 223, 217) 1px;
+  box-shadow: rgb(241, 223, 217, 0.2) 5px 5px;
+  margin: 0 5px;
+  padding: 4px 12px;
+  background-color: rgb(250, 248, 141);
+}
+.place {
+  font-size: 25px;
+}
+.temp {
+  font-size: 20px;
+  line-height: 10px;
+}
