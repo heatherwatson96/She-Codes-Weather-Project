@@ -32,15 +32,13 @@ body {
   color: whitesmoke;
 }
 .live-date {
-  margin: 500px 70px;
   font-size: 40px;
-  height: 100%;
-  width: 100%;
 }
 .temperature-container {
   padding: 0;
   text-align: center;
   margin: 50px 0;
+  color: white;
 }
 .temp-range {
   font-size: 20px;
@@ -48,7 +46,7 @@ body {
   margin: 5px 0;
 }
 .temp-arrows {
-  color: black;
+  color: white;
   font-size: 35px;
   margin: 10px;
 }
@@ -145,7 +143,7 @@ p {
   border-radius: 18px;
   border: solid #f1dfd9 1px;
   display: inline-block;
-  margin: 10px 5px 10px 15%;
+  margin: 10px 5px 10px;
   padding: 4px 12px;
 }
 .search-city {
