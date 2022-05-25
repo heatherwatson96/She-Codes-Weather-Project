@@ -36,7 +36,7 @@
 
           </div>
           <div class="col-2">
-            <div class="temperature-container">
+            <!-- <div class="temperature-container">
               <div class="temp-range">
                 8°C
               </div>
@@ -45,7 +45,7 @@
               <div><i class="fa-solid fa-arrows-up-down temp-arrows"></i></div>
               <div class="temp-range">2°C</div>
               <div class="temp-range">Lowest Temperature Today</div>
-            </div>
+            </div> -->
           </div>
         </div>
         
@@ -124,18 +124,25 @@
                             <div class="card-body location-information" >
                               <span id="box-title" class="showCity">Where to Next </span>
                               <form id="search-form" class="search=form">
-                                  <input class="city-input" type="text" id="city-input"/>
+                                  <input class="city-input" type="search" placeholder="Type a city..." autocomplet="off" id="city-input"/>
+
                                   <button class="search-city" type="submit" >🔍</button>
                               </form>
                               <div class="weather-stats">
-                                  <p><span class="place" id="place"></span></p>
-                                  <p><span class="temp" id="temp"></span></p>
+                               
+                                  <p><span class="place" id="place"></span><img class="icon" id="icon"></img></p>
+                                  <p>
+                                    <span class="temp" id="temp"></span>
+                                    
+                                  </p>
+                                  <button class="celcius-link" id="celcius-link">°C </button>
+                                  <button class="fahrenheit-link" id="fahrenheit-link">°F</button>
                                   <p><span id="current-weather"></span></p>
                                 <p> Humidity: <span id="humidity"></span></p>
                                 <p> Wind Speed: <span id="wind"></span></p>
                             </div>
-                            <div class="code-link"> 
-                              <a href="https://github.com/heatherwatson96/She-Codes-Weather-Project">Open-source code<span> by Heather Watson</span>
+                            <div > 
+                              <a class="code-link" href="https://github.com/heatherwatson96/She-Codes-Weather-Project" target="blank"> Open-source code</a> by Heather Watson
                                </div>
                           </div>
                           <div>

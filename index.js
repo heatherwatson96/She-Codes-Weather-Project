@@ -29,21 +29,47 @@ function showTemp(response) {
   let place = response.data.name;
   let placeElement = document.querySelector("#place");
   placeElement.innerHTML = `${place}`;
-  let temp = Math.round(response.data.main.temp);
-  let tempElement = document.querySelector("#temp");
-  tempElement.innerHTML = `${temp} °c`;
   let currentWeather = response.data.weather[0].main;
   let currentWeatherElement = document.querySelector("#current-weather");
   currentWeatherElement.innerHTML = `${currentWeather}`;
 
   let humidity = response.data.main.humidity;
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = `${humidity}`;
+  humidityElement.innerHTML = `${humidity} %`;
+
   let wind = Math.round(response.data.wind.speed);
   let windElement = document.querySelector("#wind");
-  windElement.innerHTML = `${wind}`;
-  console.log();
+  windElement.innerHTML = `${wind} mps`;
+
+  celciusTemp = response.data.main.temp;
+  let tempElement = document.querySelector("#temp");
+  tempElement.innerHTML = `${Math.round(celciusTemp)}°C`;
+
+  let icon = response.data.weather[0].icon;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${icon}@2x.png`
+  );
 }
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temp");
+  let fahrenheitTemperature = (celciusTemp * 9) / 5 + 32;
+  tempElement.innerHTML = `${Math.round(fahrenheitTemperature)}°F`;
+}
+function displayCelciusTemperature(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#temp");
+  tempElement.innerHTML = `${Math.round(celciusTemp)}°C`;
+}
+let celciusTemp = null;
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", searchCity);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celciusLink = document.querySelector("#celcius-link");
+celciusLink.addEventListener("click", displayCelciusTemperature);
