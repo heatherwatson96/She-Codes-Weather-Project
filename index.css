@@ -67,7 +67,6 @@ body {
 }
 
 .location-information {
-  height: 260px;
   margin: 0 auto 20px;
 }
 .second {
@@ -133,12 +132,14 @@ p {
   width: 80%;
   height: 80%;
   display: block;
-  margin: 0 auto 20px;
+  margin: 30px auto 20px;
   border-radius: 20px;
 }
 .where-background {
   background-color: #ffadad;
   padding: 20px;
+  width: 100%;
+  height: fit-content;
 }
 
 .city-input {
