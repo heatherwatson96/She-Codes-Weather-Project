@@ -65,7 +65,9 @@ body {
   display: block;
   margin: 0 auto;
 }
-
+.weather-forecast-temp-min {
+  opacity: 0.6;
+}
 .location-information {
   margin: 0 auto 20px;
 }

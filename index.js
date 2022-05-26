@@ -16,26 +16,49 @@ function getDate(date) {
 let liveDateElement = document.querySelector("#live-date");
 liveDateElement.innerHTML = getDate(currentDate);
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+  return days[day];
+}
+
 function displayForecast(response) {
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Thurs", "Fri", "Sat"];
-
   let forecastHTML = `<div class="row">`;
-  
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
     <div class="col-2">
-      <div class="weather-forecast-date">${day}</div>
-      <img src="https://openweathermap.org/img/wn/50d@2x.png" alt="" width="42"/>
+      <div class="weather-forecast-date">${formatDay(
+        forecastDay.dt
+      )}</div>${index}
+      <img 
+      src="https://openweathermap.org/img/wn/${
+        forecastDay.weather[0].icon
+      }@2x.png" alt="" width="42"/>
       <div class="weather-forecast-temperature">
-        <span class="weather-forecast-temp-max">18°</span>
-        <span class="weather-forecast--temp-min">12°</span>
+
+      
+      <span class="weather-forecast-temp-min">${Math.round(
+        forecastDay.temp.min
+      )}° |</span>
+        
+        
+     <span class="weather-forecast-temp-max">${Math.round(
+       forecastDay.temp.max
+     )}°</span>
       </div>
     </div>
     `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
@@ -76,14 +99,19 @@ function showTemp(response) {
   getForecast(response.data.coord);
 }
 
-function searchCity(event) {
-  event.preventDefault();
-  let cityInput = document.querySelector("#city-input");
-  let cityInputCorrections = cityInput.value.trim().toUpperCase();
+function searchCity(cityInput) {
+  let cityInputCorrections = cityInput.trim().toUpperCase();
   let apiKey = "6089e4fb28464b6a73284bc65d80e7ed";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInputCorrections}&units=metric`;
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemp);
 }
+
+function onSubmit(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#city-input");
+  searchCity(cityInput.value);
+}
+
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let tempElement = document.querySelector("#temp");
@@ -98,10 +126,12 @@ function displayCelciusTemperature(event) {
 let celciusTemp = null;
 
 let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", searchCity);
+searchForm.addEventListener("submit", onSubmit);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celciusLink = document.querySelector("#celcius-link");
 celciusLink.addEventListener("click", displayCelciusTemperature);
+
+searchCity("Glasgow");
