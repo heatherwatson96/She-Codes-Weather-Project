@@ -29,124 +29,48 @@
 
   <body>
 
-    <div class="locationTimeBackground">
-      <div class="container-fluid locationTime">
-        <div class="row d-flex align-items-center">
-          <div class="offset-2 col-8 title live-date" id="live-date">
+    <div class="locationTimeBackground" id="location-time-background">
+      <div class="container-fluid locationTime"> 
+          <div class="title live-date" id="live-date"></div>
+     </div>
+    </div>
 
-          </div>
-          <div class="col-2">
-            <!-- <div class="temperature-container">
-              <div class="temp-range">
-                8°C
-              </div>
-              <div class="temp-range">Highest Temperature Today</div>
+    <div class=" where-background">
+      <div class="location-search">
 
-              <div><i class="fa-solid fa-arrows-up-down temp-arrows"></i></div>
-              <div class="temp-range">2°C</div>
-              <div class="temp-range">Lowest Temperature Today</div>
-            </div> -->
-          </div>
-        </div>
-      </div>
-      <div class="weather-forecast" id="forecast">
-      </div>
-      
-      <div class="second">
-          <div class="card-body forecast-title">
-              The Next 5 Day Forecast
-          </div>
 
-      <div class="five-days-container ">
-        <div class="row row-cols-5 days-container">
-          
-          <div class="col days all-days-container ">
-            <div class="day-background">
-                <div class="title-day">Monday</div>
-                <div class="weather-emoji">☔️</div>
-                <div class="day-degrees">3°<small>C</small></div>
-                        
-                <p>Mostly rainging and poring with old men snoaring all day ok</p>
-            </div>
+        <div class="card location-search-card">
+        <div class="card-body location-information" >
+       
+          <div class=" forecast-title">
+            5-Day Forecast
           </div>
-                   <div class="col days all-days-container">
-                       <div class="day-background">
-                       <div class="title-day">Tuesday</div>
-                      <div class="weather-emoji">☔️
-                          <div class="day-degrees">1°<small>C</small></div>
-                      </div>
-                    
-                      <p>Rainy Rainy all day long rain will pour all day all day all night</p>
-                    </div>
-                    </div>
+         <div class="weather-forecast card-body " id="forecast"></div>
 
-                    <div class="col days all-days-container">
-                        <div class="day-background">
-                            <div class="title-day">Wednesday</div>
-                        <div class="weather-emoji">⛅️
-                            <div class="day-degrees">9°<small>C</small></div>
-                        </div>
-                      
-                        <p>Sunny and cloudy you never know all day just sunny and cloudy.</p>
-                      </div>
-                      </div>
-                      <div class="col days all-days-container">
-                          <div class="day-background">
-                          <div class="title-day">Thursday</div>
-                          <div class="weather-emoji">⛅️
-                              <div class="day-degrees">10°<small>C</small></div>
-                          </div>
-                        
-                          <p>Back again sunny and cloudy you never know all day just sunny and cloudy.</p>
-                        </div>
-                        </div>
-                      <div class="col days all-days-container">
-                            <div class="day-background">
-                                <div class="title-day">Friday</div>
-                            <div class="weather-emoji">🌧
-                                <div class="day-degrees">6°<small>C</small></div>
-                            </div>
                           
-                            <p>Wee bit of rainy rain all day long rain be on and off all day all night</p>
-                          </div>
-                       </div>
-                      </div>
-              
-                      <div class=" where-background">
-                        <div class="location-search">
-                          
-                          <div class="card location-search-card">
-                            <div class="card-body location-information" >
-                              <span id="box-title" class="showCity">Where to Next </span>
-                              <form id="search-form" class="search-form">
-                                  <input class="city-input" type="search" placeholder="Type a city..." autocomplet="off" id="city-input"/>
-
-                                  <button class="search-city" type="submit" >🔍</button>
-                              </form>
-                              <div class="weather-stats">
-                               
-                                  <p><span class="place" id="place"></span><img class="icon" id="icon"/></p>
-                                  <p>
-                                    <span class="temp" id="temp"></span>
-                                    
-                                  </p>
-                                  <button class="celcius-link" id="celcius-link">°C </button>
-                                  <button class="fahrenheit-link" id="fahrenheit-link">°F</button>
-                                  <p><span id="current-weather"></span></p>
-                                <p> Humidity: <span id="humidity"></span></p>
-                                <p> Wind Speed: <span id="wind"></span></p>
-                            </div>
-                            <div > 
-                              <a class="code-link" href="https://github.com/heatherwatson96/She-Codes-Weather-Project" target="blank"> Open-source code</a> by Heather Watson
-                               </div>
-                          </div>
-                          <div>
-                            <img class="explore" src="https://images.pexels.com/photos/3061345/pexels-photo-3061345.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"/> 
-                          </div>
-                        </div>
-
-                   </div>
-                      
+       <span id="box-title" class="show-city">Where to Next </span>
+       
+      <form id="search-form" class="search-form">
+       <input class="city-input" type="search" placeholder="Type a city..." autocomplet="off" id="city-input"/>
+       <button class="search-city" type="submit" >🔍</button>
+      </form>
+        
+      <div class="weather-stats">            
+       <p><span class="place" id="place"></span><img class="icon" id="icon"/></p>
+       <p><span class="temp" id="temp"></span></p>
+         <button class="celcius-link" id="celcius-link">°C </button>
+          <button class="fahrenheit-link" id="fahrenheit-link">°F</button>
+          <div class="current-weather">
+              <p><span id="current-weather"></span></p>
+               <p> Humidity: <span id="humidity"></span></p>
+              <p> Wind Speed: <span id="wind"></span></p>
+          </div>
+       </div>
+      <div class="code-link" > 
+       <a class="code-link" href="https://github.com/heatherwatson96/She-Codes-Weather-Project" target="blank"> Open-source code</a> by Heather Watson</div>
+       <div><img class="explore" src="https://images.pexels.com/photos/3061345/pexels-photo-3061345.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"/></div>
+       </div>
+      </div>     
     <script src="index.js"></script>
   </body>
 </html>
