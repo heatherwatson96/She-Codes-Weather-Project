@@ -28,49 +28,46 @@
   </head>
 
   <body>
-
     <div class="locationTimeBackground" id="location-time-background">
       <div class="container-fluid locationTime"> 
           <div class="title live-date" id="live-date"></div>
+              <div>
+      
+                <div class="location-search">
+          
+          
+                  <div class="card location-search-card">
+                  <div class="card-body location-information" >
+                 
+                    <div class=" forecast-title">
+                      5-Day Forecast
+                    </div>
+                   <div class="weather-forecast card-body " id="forecast"></div>
+          
+                                    
+                 <span id="box-title" class="show-city">Where to Next </span>
+                 
+                <form id="search-form" class="search-form">
+                 <input class="city-input" type="search" placeholder="Type a city..." autocomplet="off" id="city-input"/>
+                 <button class="search-city" type="submit" >🔍</button>
+                </form>
+                  
+                <div class="weather-stats">            
+                 <p><span class="place" id="place"></span><img class="icon" id="icon"/></p>
+                 <p><span class="temp" id="temp"></span></p>
+                   <button class="celcius-link" id="celcius-link">°C </button>
+                    <button class="fahrenheit-link" id="fahrenheit-link">°F</button>
+                    <div class="current-weather">
+                        <p><span id="current-weather"></span></p>
+                         <p> Humidity: <span id="humidity"></span></p>
+                        <p> Wind Speed: <span id="wind"></span></p>
+                    </div>
+                 </div>
+                <div class="code-link" > 
+                 <a class="code-link" href="https://github.com/heatherwatson96/She-Codes-Weather-Project" target="blank"> Open-source code</a> by Heather Watson</div>
+                </div>     
      </div>
     </div>
-
-    <div class=" where-background">
-      <div class="location-search">
-
-
-        <div class="card location-search-card">
-        <div class="card-body location-information" >
-       
-          <div class=" forecast-title">
-            5-Day Forecast
-          </div>
-         <div class="weather-forecast card-body " id="forecast"></div>
-
-                          
-       <span id="box-title" class="show-city">Where to Next </span>
-       
-      <form id="search-form" class="search-form">
-       <input class="city-input" type="search" placeholder="Type a city..." autocomplet="off" id="city-input"/>
-       <button class="search-city" type="submit" >🔍</button>
-      </form>
-        
-      <div class="weather-stats">            
-       <p><span class="place" id="place"></span><img class="icon" id="icon"/></p>
-       <p><span class="temp" id="temp"></span></p>
-         <button class="celcius-link" id="celcius-link">°C </button>
-          <button class="fahrenheit-link" id="fahrenheit-link">°F</button>
-          <div class="current-weather">
-              <p><span id="current-weather"></span></p>
-               <p> Humidity: <span id="humidity"></span></p>
-              <p> Wind Speed: <span id="wind"></span></p>
-          </div>
-       </div>
-      <div class="code-link" > 
-       <a class="code-link" href="https://github.com/heatherwatson96/She-Codes-Weather-Project" target="blank"> Open-source code</a> by Heather Watson</div>
-       <div><img class="explore" src="https://images.pexels.com/photos/3061345/pexels-photo-3061345.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"/></div>
-       </div>
-      </div>     
+    </body>
     <script src="index.js"></script>
-  </body>
 </html>

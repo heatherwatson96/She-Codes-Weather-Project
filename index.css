@@ -4,7 +4,6 @@ html {
 
 body {
   margin: 0;
-  height: 100%;
   font-family: "Yeseva One", cursive;
 }
 p {
@@ -12,7 +11,8 @@ p {
 }
 
 .locationTimeBackground {
-  height: 100%;
+  padding-bottom: 50px;
+  min-height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -35,31 +35,15 @@ p {
   width: 100%;
   text-align: center;
 }
-/* .temperature-container {
-  padding: 0;
-  text-align: center;
-  margin: 50px 0;
-  color: white;
-} */
-/* .temp-range {
-  font-size: 20px;
-  padding: 0px;
-  margin: 5px 0;
-}
-.temp-arrows {
-  color: white;
-  font-size: 35px;
-  margin: 10px;
-} */
 .location-search {
   margin: 0 auto;
   text-align: center;
 }
 .location-search-card {
   border-radius: 8px;
-  width: 90%;
-  height: 90%;
-  margin: 0 auto;
+  width: 60%;
+  /* height: 60%; */
+  margin: 30px auto;
 }
 .weather-stats {
   margin: top 60px;
@@ -75,14 +59,7 @@ p {
 .weather-forecast-temp-min {
   opacity: 0.6;
 }
-.location-information {
-  margin: 0 auto 10px;
-}
-/* .second {
-  padding: 20px;
-  height: fit-content;
-  background-color: #ffadad;
-} */
+
 .days {
   height: 180px;
   text-align: center;
@@ -141,13 +118,6 @@ p {
 .current-weather {
   font-size: 18px;
 }
-.explore {
-  width: 90%;
-  height: 90%;
-  display: block;
-  margin: 30px auto 10px;
-  border-radius: 20px;
-}
 .code-link {
   font-size: 13px;
   color: #212529;
@@ -167,13 +137,11 @@ p {
   padding: 4px 12px;
 }
 .search-city {
-  border-radius: 28px;
-  font-size: 14px;
+  border-radius: 8px;
   border: solid #f1dfd9 1px;
   box-shadow: rgb(241, 223, 217, 0.2) 5px 5px;
   margin: 0 5px;
   padding: 4px 12px;
-  background-color: rgb(250, 248, 141);
 }
 .place {
   font-size: 25px;
