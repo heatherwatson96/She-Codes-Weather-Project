@@ -4,6 +4,7 @@ html {
 
 body {
   margin: 0;
+  height: 100%;
   font-family: "Yeseva One", cursive;
 }
 p {
@@ -11,7 +12,7 @@ p {
 }
 
 .locationTimeBackground {
-  padding-bottom: 50px;
+  padding: 150px 0;
   min-height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -24,15 +25,9 @@ p {
   text-align: center;
 }
 
-.title {
-  font-size: 28px;
-  color: whitesmoke;
-}
 .live-date {
-  font-size: 40px;
-  position: sticky;
-  top: 50%;
-  width: 100%;
+  font-size: 35px;
+  color: white;
   text-align: center;
 }
 .location-search {
@@ -40,9 +35,9 @@ p {
   text-align: center;
 }
 .location-search-card {
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
-  width: 60%;
-  /* height: 60%; */
+  width: 80%;
   margin: 30px auto;
 }
 .weather-stats {
@@ -69,7 +64,7 @@ p {
   text-decoration: underline;
 }
 .day-background {
-  background-color: white;
+  /* background-color: white; */
   border-radius: 15px;
   height: 100%;
   width: 100%;
@@ -81,6 +76,7 @@ p {
   border-radius: 8px;
 }
 .forecast-title {
+  margin-top: 20px;
   border-radius: 20px;
   display: block;
   font-size: 20px;
@@ -91,7 +87,7 @@ p {
   display: block;
   font-size: 20px;
   color: black;
-  margin: 30px auto 10px;
+  margin: 10px auto 10px;
   width: fit-content;
 }
 .days-container {
@@ -130,16 +126,17 @@ p {
 }
 
 .city-input {
-  border-radius: 18px;
-  border: solid #f1dfd9 1px;
+  border-radius: 8px;
+  border: solid rgba(241, 223, 217) 1px;
   display: inline-block;
   margin: 10px 5px 10px;
   padding: 4px 12px;
 }
 .search-city {
   border-radius: 8px;
-  border: solid #f1dfd9 1px;
-  box-shadow: rgb(241, 223, 217, 0.2) 5px 5px;
+  border: 2px solid rgb(250, 248, 141);
+  box-shadow: rgb(241, 223, 217, 0.5) 5px 5px;
+  background-color: rgba(255, 255, 255, 0);
   margin: 0 5px;
   padding: 4px 12px;
 }
@@ -159,8 +156,9 @@ p {
 .fahrenheit-link,
 .celcius-link {
   border-radius: 4px;
-  border: 0.1px solid rgb(250, 248, 141);
-  background-color: white;
+  border: 2px solid rgb(250, 248, 141);
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: rgb(241, 223, 217, 0.5) 5px 5px;
   color: #212529;
   font-size: 12px;
 }

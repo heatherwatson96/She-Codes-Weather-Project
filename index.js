@@ -50,14 +50,12 @@ function displayForecast(response) {
           forecastDay.temp.min
         )}° |</span>
           
-          
-          <span class="weather-forecast-temp-max">${Math.round(
-            forecastDay.temp.max
-          )}°</span>
+        <span class="weather-forecast-temp-max">${Math.round(
+          forecastDay.temp.max
+        )}°</span>
             </div>
             </div>
             `;
-      console.log(response.data);
     }
   });
   forecastHTML = forecastHTML + `</div>`;
